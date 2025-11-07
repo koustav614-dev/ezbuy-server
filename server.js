@@ -15,6 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Route: create order (called by shipping page via fetch)
+app.get("/", (req, res) => {
+  // Redirect visitors to your login or home page
+  res.redirect("/login.html"); // or /index.html
+});
+
 app.post('/create-order', (req, res) => {
   const { fullname, address, mobile } = req.body;
   if (!fullname || !address || !mobile) {

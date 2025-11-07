@@ -7,7 +7,7 @@
         <title>Home - EZBuy</title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
@@ -16,9 +16,9 @@
             <div class="container">
                 <nav class="navigation">
                     <ul>
-                        <li><a href="{{ url_for('admin_panel') }}">Admin</a></li>
-                        <li><a href="{{ url_for('index') }}">Home</a></li>
-                        <li><a href="{{ url_for('product') }}">Products</a></li>
+                        <li><a href="admin.html">Admin</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
                         <li><a href="#">Contact</a></li>
                         <li>
                             <a>Cart <i class="bx bxs-cart" id="cart-icon"></i></a>
@@ -33,7 +33,7 @@
                 <div class="col-2">
                     <h1>Upgrade Your Listening!</h1>
                     <p>Shop Electronics At Fair Price.</p>
-                    <a href="{{ url_for('product') }}" class="btn">Explore Now &#8594;</a>
+                    <a href="product.html" class="btn">Explore Now &#8594;</a>
                 </div>
                 <div class="col-2 headphone">
                     <img src="https://purepng.com/public/uploads/large/purepng.com-headphoneelectronics-headset-headphone-941524670117zoozj.png">
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-4">
                     <img src="https://m.media-amazon.com/images/I/31xTIeGmiCL._SX300_SY300_QL70_FMwebp_.jpg">
-                    <a href="{{ url_for('product_details', product_id=1) }}"><h4>boAt Immortal 158 Earbuds</h4></a>
+                    <a href="product-details-1.html"><h4>boAt Immortal 158 Earbuds</h4></a>
                     <div class="rating">
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
@@ -75,7 +75,7 @@
 
                 <div class="col-4">
                     <img src="https://m.media-amazon.com/images/I/5155PFA2N+L._SX679_.jpg">
-                    <a href="{{ url_for('product_details', product_id=2) }}"><h4>OnePlus Nord CE4 5G<br>(Mega Blue)</h4></a>
+                    <a href="product-details-2.html"><h4>OnePlus Nord CE4 5G<br>(Mega Blue)</h4></a>
                     <div class="rating">
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
@@ -88,7 +88,7 @@
 
                 <div class="col-4">
                     <img src="https://m.media-amazon.com/images/I/41ysY3hD4CL._SX300_SY300_QL70_FMwebp_.jpg">
-                    <a href="{{ url_for('product_details', product_id=3) }}"><h4>Vivo Y29 5G<br>(Glacier Blue)</h4></a>
+                    <a href="product-details-3.html"><h4>Vivo Y29 5G<br>(Glacier Blue)</h4></a>
                     <div class="rating">
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
@@ -101,7 +101,7 @@
 
                 <div class="col-4">
                     <img src="https://m.media-amazon.com/images/I/41ql8-0lJzL._SX300_SY300_QL70_FMwebp_.jpg">
-                    <a href="{{ url_for('product_details', product_id=4) }}"><h4>IQOO Z10 5G<br>(Glacier Silver)</h4></a>
+                    <a href="product-details-4.html"><h4>IQOO Z10 5G<br>(Glacier Silver)</h4></a>
                     <div class="rating">
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-4">
                     <img src="https://m.media-amazon.com/images/I/71Ndw3SUPyL._SX425_.jpg">
-                    <a href="{{ url_for('product_details', product_id=5) }}"><h4>Vivo Y39 5G<br>(Lotus Purple)</h4></a>
+                    <a href="product-details-5.html"><h4>Vivo Y39 5G<br>(Lotus Purple)</h4></a>
                     <div class="rating">
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
@@ -126,7 +126,7 @@
 
                 <div class="col-4">
                     <img src="https://m.media-amazon.com/images/I/31gTzmkKS0S._SX300_SY300_QL70_FMwebp_.jpg">
-                    <a href="{{ url_for('product_details', product_id=6) }}"><h4>JBL Tune 510BT Wireless Headphones</h4></a>
+                    <a href="product-details-6.html"><h4>JBL Tune 510BT Wireless Headphones</h4></a>
                     <div class="rating">
                         <i class='bx bxs-star'></i>
                         <i class='bx bxs-star'></i>
@@ -196,6 +196,6 @@
             </div>
         </div>
         <!-- <script src="add-to-cart.js"></script> -->
-        <script src="{{ url_for('static', filename='src.js') }}"></script>
+        <script src="src.js"></script>
     </body>
 </html>
