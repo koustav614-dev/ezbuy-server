@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment - EZBuy</title>
+<link rel="stylesheet" href="be1aeb6c-1a6b-4795-9b44-2bc17d2abf70.css">
+<style>
+.payment-container {
+    max-width: 500px;
+    margin: 150px auto 60px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(116,148,236,0.20);
+    padding: 40px 30px;
+    text-align: center;
+}
+.payment-container h2 {
+    color: #2337c6;
+    margin-bottom: 20px;
+}
+.payment-container img {
+    width: 220px;
+    margin: 20px auto;
+    display: block;
+}
+.payment-container p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+.loader {
+    display: none;
+    margin-top: 20px;
+    color: #2337c6;
+    font-weight: 600;
+}
+</style>
+</head>
+<body>
+<header>
+  <h2 class="logo"><i class='bx bxs-shopping-bag'></i> EZBuy</h2>
+</header>
+
+<div class="payment-container">
+  <h2>Scan to Pay</h2>
+  <img src="qr.png" alt="QR Code">
+  <p>Scan this QR code with your UPI app to complete the payment.</p>
+  <p class="loader" id="loadingMsg">Waiting for payment confirmation...</p>
+</div>
+
+<script>
+// --- SIMULATION OF AUTOMATIC REDIRECT AFTER PAYMENT ---
+// In real setup, you'd replace this with payment gateway webhook/callback verification.
+setTimeout(() => {
+  document.getElementById("loadingMsg").style.display = "block";
+}, 2000); // show "waiting" message after 2s
+
+setTimeout(() => {
+  window.location.href = "success.html";
+}, 6000); // redirect after 6 seconds (simulate payment confirmation)
+</script>
+<p id="statusText"></p>
+<img src="assets/qr.png" alt="QR code">
+<script src="js/payment.js"></script>
+
+</body>
+</html>

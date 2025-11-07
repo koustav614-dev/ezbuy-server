@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product Details - EZBuy</title>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header>
+            <h2 class="logo"><i class="bx bxs-shopping-bag"></i> EZBuy</h2>
+            <div class="container">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="{{ url_for('admin_panel') }}">Admin</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <a>Cart <i class="bx bxs-cart" id="cart-icon"></i></a>
+                        </li>
+                        <li><button class="btnLogin-popup">Login</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="small-container single-product">
+            <div class="row">
+                <div class="product-box">
+                    <div class="col-2">
+                        <img src="https://m.media-amazon.com/images/I/41ql8-0lJzL._SX300_SY300_QL70_FMwebp_.jpg" width="600" />
+                    </div>
+                    <div class="col-2">
+                        <h1 class="product-title">IQOO Z10 5G(Glacier Silver)</h1>
+                        <h4 class="price">₹ 27999</h4>
+                    </div>    
+                    <div class="rating">
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star"></i>
+                        <i class="bx bxs-star-half"></i>
+                    </div>
+                    <a class="btn add-to-cart">Add to Cart</a>
+                    <h3>Product Details <i class="bx bx-right-indent"></i></h3>
+                    <p>7300 mAh Battery.<br>Snapdragon 7s Gen 3 Processor.<br>With 90W FlashCharge technology.<br>Latest Software : Runs on Funtouch OS 15.<br>Record in 4K at 30fps.</p>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="row row-2">
+                <h2 class="title title-2">Related Products</h2>
+                <a href="product.html"><p id="view">View more</p></a>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="row">
+                
+                <div class="col-4">
+                    <img src="https://m.media-amazon.com/images/I/71Ndw3SUPyL._SX425_.jpg">
+                    <a href="product-details-5.html"><h4>Vivo Y39 5G<br>(Lotus Purple)</h4></a>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
+                    <p>₹ 18999</p>
+                </div>
+                <div class="col-4">
+                    <img src="https://m.media-amazon.com/images/I/31gTzmkKS0S._SX300_SY300_QL70_FMwebp_.jpg">
+                    <a href="product-details-6.html"><h4>JBL Tune 510BT Wireless Headphones</h4></a>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <p>₹ 2499</p>
+                </div>
+                <div class="col-4">
+                    <img src="https://m.media-amazon.com/images/I/31xTIeGmiCL._SX300_SY300_QL70_FMwebp_.jpg">
+                    <a href="product-details-1.html"><h4>boAt Immortal 158 Earbuds</h4></a>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <p>₹ 1399</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://m.media-amazon.com/images/I/5155PFA2N+L._SX679_.jpg">
+                    <a href="product-details-2.html"><h4>OnePlus Nord CE4 5G(Mega Blue)</h4></a>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <p>₹ 20999</p>
+                </div>
+                <div class="col-4">
+                    <img src="https://m.media-amazon.com/images/I/41ysY3hD4CL._SX300_SY300_QL70_FMwebp_.jpg">
+                    <a href="product-details-3.html"><h4>Vivo Y29 5G<br>(Glacier Blue)</h4></a>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star' ></i>
+                    </div>
+                    <p>₹ 17999</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Cart options -->
+        <div class="cart">
+            <h2 class="cart-title">My Cart</h2>
+            <div class="cart-content">
+                <!--<div class="cart-box">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTjN7XEkhrGr0-Ypr7RYWza17l8m8I6korn89mDIvjsO5VgCL35H8fo7rL0tSV74OKF7IJeeHAh0dH3gNz5SxmOmj-mNjoKO1spxFQAHZBQPgkKzSMMYe0CWg" class="cart-img">
+                    <div class="cart-detail">
+                        <h2 class="cart-product-title">boAt Immortal 158 Earbuds</h2>
+                        <span class="cart-price">&#8377; 1,299</span>
+                        <div class="cart-quantity">
+                            <button id="decrement">-</button>
+                            <span class="number">1</span>
+                            <button id="increment">+</button>
+                        </div>
+                    </div>
+                    <i class='bx bxs-trash cart-remove'></i>
+                </div>-->
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">₹ 0</div>
+            </div>
+            <button class="btn-buy">Buy Now</button>
+            <i class='bx bx-x' id="cart-close"></i>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h2 class="logo"><i class="bx bxs-shopping-bag"></i> EZBuy</h2>
+                        <p>
+                            Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the
+                            Many.
+                        </p>
+                    </div>
+
+                    <div class="footer-col-2">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>X</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+                <p class="copyright">Copyright 2025 - EZBuy Website</p>
+            </div>
+        </div>
+        <script src="add-to-cart.js"></script>
+    </body>
+</html>

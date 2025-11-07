@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shipping - EZBuy</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='payment.css') }}">
+
+    </head>
+    <body>
+        <header>
+            <h2 class="logo"><i class='bx bxs-shopping-bag'></i> EZBuy</h2>
+            <div class="container">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="{{ url_for('admin_panel') }}">Admin</a></li>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('product') }}">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <a>Cart <i class="bx bxs-cart" id="cart-icon"></i></a>
+                        </li>
+                        <li><button class="btnLogin-popup">Login</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+<div class="payment-container">
+  <h2>Shipping Details</h2>
+  <form class="payment-form" onsubmit="goToPayment(event)">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" required>
+
+      <label for="address">Shipping Address</label>
+      <input type="text" id="address" required>
+
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+
+      <button type="submit" class="btn">Proceed to Payment</button>
+  </form>
+</div>
+
+<script>
+function goToPayment(e){
+  e.preventDefault();
+  window.location.href = "payment.html";
+}
+</script>
+<script src="js/shipping.js"></script>
+</body>
+</html>

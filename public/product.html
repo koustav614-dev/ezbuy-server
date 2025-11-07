@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - EZBuy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<header>
+    <h2 class="logo"><i class='bx bxs-shopping-bag'></i> EZBuy</h2>
+    <nav class="navigation">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('product') }}">Products</a></li>
+            <li><a href="{{ url_for('admin_panel') }}">Admin</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="small-container" style="margin-top: 120px;">
+    <h2 class="title">Available Products</h2>
+
+    <div class="row">
+        {% for p in products %}
+        <div class="col-4">
+            <img src="{{ p.image_url }}" alt="{{ p.name }}">
+            <h4>{{ p.name }}</h4>
+            <p>₹ {{ p.price }}</p>
+            <a href="{{ url_for('product_details', product_id=p.id) }}" class="btn">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

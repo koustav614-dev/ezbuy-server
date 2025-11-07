@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Panel - EZBuy</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+    <body>
+        <header>
+            <h2 class="logo"><i class='bx bxs-shopping-bag'></i> EZBuy</h2>
+            <div class="container">
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="{{ url_for('admin_panel') }}">Admin</a></li>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('product') }}">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <a>Cart <i class="bx bxs-cart" id="cart-icon"></i></a>
+                        </li>
+                        <li><button class="btnLogin-popup">Login</button></li>
+                    </ul>
+                </nav>
+            </div>
+</header>
+
+<div class="small-container" style="margin-top: 120px;">
+    <h2 class="title">Product Management</h2>
+
+    <!-- Add Product Form -->
+    <form action="{{ url_for('add_product') }}" method="POST" style="margin-bottom: 50px;">
+        <input type="text" name="name" placeholder="Product Name" required><br><br>
+        <input type="text" name="price" placeholder="Price" required><br><br>
+        <textarea name="description" placeholder="Description" required></textarea><br><br>
+        <input type="text" name="image_url" placeholder="Image URL"><br><br>
+        <button type="submit" class="btn">Add Product</button>
+    </form>
+
+    <!-- Product Table -->
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for product in products %}
+        <tr>
+            <td>{{ product.id }}</td>
+            <td><img src="{{ product.image_url }}" width="80"></td>
+            <td>{{ product.name }}</td>
+            <td>₹ {{ product.price }}</td>
+            <td>{{ product.description }}</td>
+            <td>
+                <a href="{{ url_for('delete_product', id=product.id) }}" class="btn">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>
